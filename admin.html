@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+	<link rel="stylesheet" href="bootstrap-4.4.1/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+	<style>
+		body{
+			background:linear-gradient( rgba(0,0,255,0.5),rgba(0,0,0,.5));
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.col-md-6{
+			margin-top: 50px;	
+		}
+	</style>
+</head>
+<body>
+	<form action="admin_php.php" method="POST" enctype="multipart/form-data">
+	<div class="col-md-6 offset-md-3">
+		<div class="panel panel-primary">
+		<div class="panel-heading">
+			<center><h2>News add to Website</h2></center>
+		</div>
+	    <div class="panel-body form-group">
+		    <div class="row">
+		    	<div class="col-md-6">
+					<label for="">Maqola sarlavhasi</label>
+					<input class="form-control" name="title" type="text" required=""><br>
+				</div>
+				<div class="col-md-6">
+					<label for="">Picture</label>
+					<input class="input" type="file" name="img" accept="image/*" required=""> <br>
+				</div>	
+			</div>
+			<div class="row">
+			<div class="col-md-6">
+					<label for="">Maqola qisqacha matni</label>
+					<textarea class="form-control" name="short" cols="15" rows="5" required="">
+					</textarea> <br>
+			</div>
+				<div class="col-md-6">
+					<label for="">Maqola matni</label><br>
+					<textarea class="form-control" name="text" cols="20" rows="7" required="">
+					</textarea> <br>
+				</div>
+					
+			</div>
+			<input class="form-control btn btn-primary" type="submit" name="submit" value="Submit" required="">
+		</div>
+		</div>
+	</div>
+	</form>
+</body>
+</html>
