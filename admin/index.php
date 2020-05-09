@@ -1,4 +1,3 @@
-<?php include 'check/checked.php'?>
 <?php include '../pagination.php'?>
 <?php include 'layouts/header.php'?>
     
@@ -13,7 +12,9 @@
         </p><br>
     </div>
     <div class="card-body">
-            <?php if (isset($_SESSION['added'])): ?>
+            <?php 
+                session_start();
+            if (isset($_SESSION['added'])): ?>
                 <div class="alert alert-success">
                     Ma'lumotni qo'shish muvaffaqiyatli bo'ldi! 
                 </div>

@@ -12,6 +12,14 @@ $fetch=$query->fetchAll();
         <p><a class="btn btn-sm btn-primary float-right" href="index.php">Orqaga</a></p>
     </div>
     <div class="card-body">
+    	<?php 
+    		session_start();
+    	 if (isset($_SESSION['destroy'])): ?>
+                <div class="alert alert-success">
+                    Ma'lumotni o'chirish muvaffaqiyatli bo'ldi! 
+                </div>
+            <?php endif;
+            session_unset(); ?>
 		<div class="row">
 			<table style="width:100%;" class="table table-bordered table-hover">
 				<tr>
@@ -19,7 +27,8 @@ $fetch=$query->fetchAll();
 					<th>Familiyasi</th>
 					<th>Ism</th>
 					<th>Izoh</th>
-					<th>Email</th>	
+					<th>Email</th>
+					<th>Action</th>	
 				</tr>
 				<?php foreach($fetch as $value):?>
 				<tr> 
@@ -28,6 +37,7 @@ $fetch=$query->fetchAll();
 					<td><?=$value['ism']?></td>
 					<td><?=$value['izoh']?></td>
 					<td><?=$value['email']?></td>
+					<td><a  class="btn btn-sm btn-danger float-left m-1" href="feedback_delete.php?id=<?=$value['id']?>" type="submit"><i class="fa fa-trash"></i>DELETE</a></td>
 				</tr>
 				<?php endforeach;?>
 			</table>

@@ -20,7 +20,7 @@ $get=$gets->fetch();
 			<div class="panel panel-primary">
 	    	<div class="panel-body form-group">
 		    <div class="row">
-				<div>
+				<div class="col-md-12">
 					<h3><?=$get['title']?></h3>
 				</div>
 		    	<div>

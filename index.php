@@ -7,24 +7,41 @@
 			    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
 			    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
 			    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+			    <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+			    <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+
 			  </ol>
 			  <div class="carousel-inner">
 			    <div class="carousel-item active">
-			      <img src="images/07.jpg" class="d-block w-100" alt="...">
+			      <img src="images/01.jpg" style="height: 1000px;" class="d-block w-100" alt="...">
 			      <div class="carousel-caption d-none d-md-block">
 			        <h5>First slide label</h5>
 			        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 			      </div>
 			    </div>
 			    <div class="carousel-item">
-			      <img src="images/08.jpg" class="d-block w-100" alt="...">
+			      <img src="images/03.jpg" style="height: 1000px;" class="d-block w-100" alt="...">
 			      <div class="carousel-caption d-none d-md-block">
 			        <h5>Second slide label</h5>
 			        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 			      </div>
 			    </div>
 			    <div class="carousel-item">
-			      <img src="images/09.jpg" class="d-block w-100" alt="...">
+			      <img src="images/05.jpg" style="height: 1000px;" class="d-block w-100" alt="...">
+			      <div class="carousel-caption d-none d-md-block">
+			        <h5>Third slide label</h5>
+			        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+			      </div>
+			    </div>
+			    <div class="carousel-item">
+			      <img src="images/06.jpg" style="height: 1000px;" class="d-block w-100" alt="...">
+			      <div class="carousel-caption d-none d-md-block">
+			        <h5>Third slide label</h5>
+			        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+			      </div>
+			    </div>
+			    <div class="carousel-item">
+			      <img src="images/04.jpg" style="height: 1000px;" class="d-block w-100" alt="...">
 			      <div class="carousel-caption d-none d-md-block">
 			        <h5>Third slide label</h5>
 			        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -46,12 +63,12 @@
 				<?php foreach ($items as $item):?>
 					<div id="div" class="col-md-3">
 						<div class="card" style="width: 100%;">
-						  <img src="<?=$item['img']?>" class="card-img-top" alt="...">
+						  <img src="<?=$item['img']?>" style="width: 300px;height: 200px;" class="card-img-top" alt="...">
 						  <div class=" card-body">
 						    <h5 class="card-title"><?=$item['title']?> </h5>
 						    <div id="animate">
-							    <p  class="card-text phover"><?=$item['short']?></p>
-							    <a href="batafsil.php?id=<?=$item['id']?>" class="btn btn-primary ahover">Go somewhere</a>
+							    <p  class="card-text"><?=$item['short']?></p>
+							    <a href="batafsil.php?id=<?=$item['id']?>" class="btn btn-primary">Batafsil o'qish</a>
 						    </div>
 						  </div>
 						</div>

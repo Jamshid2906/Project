@@ -10,11 +10,11 @@ $img0=$query['img'];
 ?>
 <?php 
     if(isset($_POST) && isset($_POST['submit1'])){
-            $title1=$_POST['title1'];
-            $short1=$_POST['short1'];
-            $text1=$_POST['text1'];
-            
-            if(isset($_FILES['img1'])){
+            $title1=trim($_POST['title1']);
+            $short1=trim($_POST['short1']);
+            $text1=trim($_POST['text1']);
+
+            if(!empty($_FILES['img1']['tmp_name'])){
 				$imgUniq=uniqid();
 				$imgType=$_FILES['img1']['type'];
 					
@@ -28,14 +28,17 @@ $img0=$query['img'];
 				else{
 					
 					$img1=$img0;
+						
 				} 
-				// echo $img1;
-				// exit();
-                    $update=$pdo->prepare("UPDATE `photo` SET `title`=? ,`short`=? , `text`=? , `img`=? WHERE `id`=?");
-                    $update->execute([$title1,$short1,$text1,$img1,$id]);
-
-            		session_start();
-            		$_SESSION['update']="update";
-                    header ('Location: ../Project1/admin/index.php');
+				
+						           		
 }
+
+	if(trim($title1)!=trim($title0) || trim($short1)!=trim($short0) || trim($text1)!=trim($text0) || $img1!=$img0 ){
+		session_start();
+		$_SESSION['update']="update";
+	}
+	$update=$pdo->prepare("UPDATE `photo` SET `title`=? ,`short`=? , `text`=? , `img`=? WHERE `id`=?");
+	$update->execute([$title1,$short1,$text1,$img1,$id]);	
+    header ('Location: ../Project1/admin/index.php');
 ?>
