@@ -1,7 +1,10 @@
 <?php
     session_start();
-    $login = $_SESSION['login'];
-    if (empty($login)) {
+    $user=$_SESSION['user_data'];
+    // var_dump($_SESSION['user_data']);
+    // exit();
+    if (isset($user)==false) {
         header('Location: ./login.php');
     }
+
 ?>

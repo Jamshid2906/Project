@@ -3,13 +3,10 @@ $active=basename($_SERVER['PHP_SELF'],".php");
 
 
 ?>
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Title</title>
+	<title>Sport</title>
 	<link rel="stylesheet" href="bootstrap-4.4.1/bootstrap-4.4.1-dist/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="min_css.css"/> 
 </head>
@@ -33,8 +30,8 @@ $active=basename($_SERVER['PHP_SELF'],".php");
 			        <a class="nav-link" href="./contact.php">Aloqa</a>
 			      </li>
 			    </ul>
-			    <form class="form-inline my-2 my-lg-0" action="#" method="GET">
-			      <input class="form-control mr-sm-2" type="search" placeholder="Search" name="search" aria-label="Search">
+			    <form class="form-inline my-2 my-lg-0" action="search.php" method="GET">
+			      <input class="form-control mr-sm-2" type="search" placeholder="Search" name="input" aria-label="Search">
 			      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Source">Search</button>
 			    </form>
 			  </div>

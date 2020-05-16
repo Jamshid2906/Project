@@ -1,6 +1,6 @@
 <?php include '../pagination.php'?>
+<?php include 'chech/checked.php'?>
 <?php include 'layouts/header.php'?>
-    
 <!-- Basic Card Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
@@ -13,7 +13,7 @@
     </div>
     <div class="card-body">
             <?php 
-                session_start();
+                // session_start();
             if (isset($_SESSION['added'])): ?>
                 <div class="alert alert-success">
                     Ma'lumotni qo'shish muvaffaqiyatli bo'ldi! 
@@ -72,5 +72,4 @@
         </div>
     </div>
 </div>
-
 <?php include 'layouts/footer.php'?>

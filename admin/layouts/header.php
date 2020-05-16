@@ -4,7 +4,7 @@ $active=basename($_SERVER['PHP_SELF'],".php");
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Title</title>
+	<title>Sport (admin)</title>
 	<link rel="stylesheet" href="../bootstrap-4.4.1/bootstrap-4.4.1-dist/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="../min_css.css"/> 
 </head>

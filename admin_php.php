@@ -27,27 +27,6 @@
 		$my=$pdo->prepare("insert into `photo`(`title`,`short`,`text`,`img`,`time`,`view`)
 							values(?,?,?,?,NOW(),?)");
 		$my->execute(array($title,$short,$text,$img,"0"));
-
-        
-/*  Direction
-
-		Technology
-
-    Title
-
-		Lorem Ipsum is simply
-
-	Short
-
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud eiusmod tempor incididunt ut labore et dolore magna aliqua exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		Ut enim ad minim veniam, quis nostrud eiusmod tempor incididunt ut labore et dolore magna aliqua exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-	Text
-
-		Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, con sectetuer adipiscing elit. Mauris fermentum dictum magna.	
-		There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-
-*/
 	}
 	session_start();
 	$_SESSION['added']="added";

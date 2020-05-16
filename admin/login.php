@@ -1,3 +1,4 @@
+<?php include 'check/access.php'?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +7,7 @@
 </head>
 <body>
 <div class="box">
-	<form action="check/access.php" method="POST">	
+	<form  method="POST">	
 		<h1>Login Here</h1>
 		<input type="text" name="login" placeholder="Username" autocomplete="off">
 		<input type="password" name="password" placeholder="Password" maxlength="10" autocomplete="off">
