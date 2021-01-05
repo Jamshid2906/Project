@@ -4,6 +4,12 @@ $query=$pdo->query("SELECT * FROM `feedback`");
 $fetch=$query->fetchAll();
 ?>
 <?php include "layouts/header.php"; ?>
+<?php
+	$user=isset($_SESSION['user_data']) ? $_SESSION['user_data'] : null;
+	if ($user==null) {
+		header('Location: login.php');
+	}
+?>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">
@@ -13,13 +19,12 @@ $fetch=$query->fetchAll();
     </div>
     <div class="card-body">
     	<?php 
-    		session_start();
+    		// session_start();
     	 if (isset($_SESSION['destroy'])): ?>
                 <div class="alert alert-success">
                     Ma'lumotni o'chirish muvaffaqiyatli bo'ldi! 
                 </div>
-            <?php endif;
-            session_unset(); ?>
+            <?php endif; ?>
 		<div class="row">
 			<table style="width:100%;" class="table table-bordered table-hover">
 				<tr>
@@ -44,3 +49,4 @@ $fetch=$query->fetchAll();
 		</div>
 	</div>
 <?php include "layouts/footer.php"; ?>
+<?php unset($_SESSION['destroy'])?>

@@ -9,6 +9,12 @@ $text0=$query['text'];
 $img0=$query['img'];
 ?>
 <?php include 'layouts/header.php'?>
+<?php
+	$user=isset($_SESSION['user_data']) ? $_SESSION['user_data'] : null;
+	if ($user==null) {
+		header('Location: login.php');
+	}
+?>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">
@@ -37,7 +43,7 @@ $img0=$query['img'];
 						<img style="margin:5px 0px;" src="../<?=$img0?>" width="100">
 					</div>
 					<input type="hidden" name="hidden" value="<?=$img0?>"  accept="image/*" autocomplete="off"> 
-					<input type="file" name="img1"   accept="image/*" autocomplete="off"> 
+					<input type="file" name="img1" accept="image/*" autocomplete="off"> 
 				</div>
 				<div class="input-group" style="margin:5px 0px;">	
 					<label style="width:100%;font-size: 20px;font-weight: bold;" for="">Maqola qisqacha matni</label>

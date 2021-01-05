@@ -9,6 +9,13 @@ $text0=$query['text'];
 $img0=$query['img'];
 ?>
 <?php include 'layouts/header.php'?>
+<?php
+	// session_start();
+	$user=isset($_SESSION['user_data']) ? $_SESSION['user_data'] : null;
+	if ($user==null) {
+		header('Location: login.php');
+	}
+?>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">

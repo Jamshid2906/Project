@@ -6,5 +6,5 @@
     if (isset($user)==false) {
         header('Location: ./login.php');
     }
-
+    // session_unset();
 ?>

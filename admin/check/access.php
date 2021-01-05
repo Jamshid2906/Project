@@ -12,9 +12,12 @@
         //var_dump($user_data);
         if ($user_data) 
         {
-            $_SESSION['user_data'] =$user_data;
-            header('Location: index.php');
-    	}
+            $_SESSION['user_data'] = $login;
+            header('Location: ../index.php');
+    	}else{
+            $_SESSION['error'] =1;
+            header('Location: ../login.php');
+        }
 	  
    }
 ?>

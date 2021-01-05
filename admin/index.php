@@ -1,6 +1,12 @@
 <?php include '../pagination.php'?>
-<?php include 'chech/checked.php'?>
 <?php include 'layouts/header.php'?>
+<?php
+    // session_start();
+    $user=isset($_SESSION['user_data']) ? $_SESSION['user_data'] : null;
+    if ($user==null) {
+        header('Location: login.php');
+    }
+?>
 <!-- Basic Card Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
@@ -12,9 +18,7 @@
         </p><br>
     </div>
     <div class="card-body">
-            <?php 
-                // session_start();
-            if (isset($_SESSION['added'])): ?>
+            <?php if (isset($_SESSION['added'])): ?>
                 <div class="alert alert-success">
                     Ma'lumotni qo'shish muvaffaqiyatli bo'ldi! 
                 </div>
@@ -26,9 +30,7 @@
                 <div class="alert alert-success">
                     Ma'lumotni o'chirish muvaffaqiyatli bo'ldi! 
                 </div>
-            <?php endif;
-            session_unset();
-            ?>    
+            <?php endif ?>    
         <table class="table table-bordered">
             <tr>
                 <th>ID</th>
@@ -73,3 +75,8 @@
     </div>
 </div>
 <?php include 'layouts/footer.php'?>
+<?php 
+    unset($_SESSION['added']);
+    unset($_SESSION['update']);
+    unset($_SESSION['destroy']);
+?>

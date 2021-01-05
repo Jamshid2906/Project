@@ -30,8 +30,7 @@ $img0=$query['img'];
 					$img1=$img0;
 						
 				} 
-				
-						           		
+										           		
 }
 
 	if(trim($title1)!=trim($title0) || trim($short1)!=trim($short0) || trim($text1)!=trim($text0) || $img1!=$img0 ){
