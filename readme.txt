@@ -1,4 +1,4 @@
-1)pryect yuklab olingandan keyin mini_project degan baza yaratiladi.
+1)proyekt yuklab olingandan keyin mini_project degan baza yaratiladi.
 2) mini_project baza ichida feedback, user,photo degan jadvallar bo'ladi.
 3)
 feedback

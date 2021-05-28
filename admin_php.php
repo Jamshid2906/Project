@@ -30,5 +30,5 @@
 	}
 	session_start();
 	$_SESSION['added']="added";
-	header('Location:../Project1/admin/index.php');	
+	header('Location:../Project/admin/index.php');	
 ?>

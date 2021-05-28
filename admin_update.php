@@ -39,5 +39,5 @@ $img0=$query['img'];
 	}
 	$update=$pdo->prepare("UPDATE `photo` SET `title`=? ,`short`=? , `text`=? , `img`=? WHERE `id`=?");
 	$update->execute([$title1,$short1,$text1,$img1,$id]);	
-    header ('Location: ../Project1/admin/index.php');
+    header ('Location: ../Project/admin/index.php');
 ?>
