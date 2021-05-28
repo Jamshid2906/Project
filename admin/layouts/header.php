@@ -27,7 +27,7 @@ session_start();
 			        <a class="nav-link " href="./index.php" >Bosh sahifa<span class="sr-only">(current)</span></a>
 			      </li>
 			      <li class="nav-item <?= ($active=='feedback') ? 'active bold' :'' ?>">
-			        <a class="nav-link "  href="./feedback.php" >Feedback</a>
+			        <a class="nav-link "  href="./feedback.php" >Mulohaza</a>
 			      </li>
 			      <!-- li class="nav-item">
 			        <a class="nav-link " href="./table.php">Table</a>

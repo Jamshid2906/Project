@@ -1,6 +1,6 @@
         <footer>
 			<div class=" footer text-center">
-				Biz bilan aloqada bo'ling 2020 yil
+				Biz bilan aloqada bo'ling <?php echo date("Y")?> yil
 			</div>
 		</footer>
     </div>
